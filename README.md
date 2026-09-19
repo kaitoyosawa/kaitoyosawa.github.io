@@ -4,9 +4,9 @@ A black-and-white academic website with responsive alignment, publications, cont
 
 ## Hosting
 
-Live website: https://ktoyosaw.github.io/
+Live website: https://kaitoyosawa.github.io/
 
-This folder is ready for a GitHub Pages user site. Place its contents at the root of a public repository named `ktoyosaw.github.io`.
+This folder is ready for a GitHub Pages user site. Place its contents at the root of a public repository named `kaitoyosawa.github.io`.
 
 In the repository, open **Settings → Pages**. Choose **Deploy from a branch**, select **main** and **/(root)**, then save. The empty `.nojekyll` file keeps the site as plain static HTML, CSS, and JavaScript.
 
