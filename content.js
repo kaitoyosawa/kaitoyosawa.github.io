@@ -1,4 +1,4 @@
-// Edit this file to personalize the website. All content is plain text.
+// Edit this file to personalize the website. Use plain text and { label, url } links.
 // Content is based on Kai Toyosawa's September 2026 CV.
 window.siteContent = {
   draft: false,
@@ -7,7 +7,13 @@ window.siteContent = {
   institution: "University of Münster",
   description: "Kai Toyosawa, postdoctoral researcher at the University of Münster. Research in operator algebras, geometric group theory, and ergodic theory.",
   bio: [
-    "I am a postdoctoral researcher at the University of Münster, working with David Kerr. I received my Ph.D. in Mathematics from Vanderbilt University in May 2025, advised by Jesse Peterson.",
+    [
+      "I am a postdoctoral researcher at the University of Münster, working with ",
+      { label: "David Kerr", url: "http://dgkerr.com" },
+      ". I received my Ph.D. in Mathematics from Vanderbilt University in May 2025, advised by ",
+      { label: "Jesse Peterson", url: "https://www.math.uwaterloo.ca/~j37peter/" },
+      "."
+    ],
     "My research interests are operator algebras, geometric group theory, and ergodic theory."
   ],
   // Later, place a portrait in this folder and use e.g. photo: "portrait.jpg".

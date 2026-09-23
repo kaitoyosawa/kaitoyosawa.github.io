@@ -34,7 +34,22 @@
   if (content.description) document.querySelector('meta[name="description"]').content = content.description;
   $('affiliation').textContent = [content.role, content.institution].filter(Boolean).join(' · ');
   $('affiliation').hidden = !$('affiliation').textContent;
-  $('bio').replaceChildren(...(content.bio || []).map(text => make('p', text)));
+  $('bio').replaceChildren(...(content.bio || []).map(paragraph => {
+    const element = make('p');
+    (Array.isArray(paragraph) ? paragraph : [paragraph]).forEach(part => {
+      if (typeof part === 'string') {
+        element.append(document.createTextNode(part));
+        return;
+      }
+      const url = safeUrl(part.url);
+      if (url) {
+        const link = make('a', part.label);
+        link.href = url;
+        element.append(link);
+      } else element.append(document.createTextNode(part.label || ''));
+    });
+    return element;
+  }));
   renderLinks($('profile-links'), content.links);
   const photoUrl = safeUrl(content.photo);
   if (photoUrl && !photoUrl.startsWith('mailto:')) {
