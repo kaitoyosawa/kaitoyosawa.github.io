@@ -14,8 +14,15 @@ window.siteContent = {
   // Leave blank for a complete layout with no empty photo box.
   photo: "",
   // Example: { label: "Curriculum vitae", url: "cv.pdf" }
-  links: [{ label: "Curriculum vitae (PDF)", url: "cv.pdf" }],
+  links: [{ label: "Curriculum vitae (PDF)", url: "cv.pdf?v=20260924" }],
   papers: [
+    {
+      title: "A paradoxical route from hyperbolic geometry to proper proximality",
+      authors: "D. Osin, K. Toyosawa, and Z. Yang",
+      venue: "Preprint",
+      year: "2026",
+      links: [{ label: "arXiv:2609.21896", url: "https://arxiv.org/abs/2609.21896" }]
+    },
     {
       title: "Properly proximal countable measured groupoids",
       authors: "A. Fernández Quero and K. Toyosawa",

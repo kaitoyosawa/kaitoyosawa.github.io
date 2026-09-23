@@ -52,11 +52,13 @@
     const details = make('div');
     details.append(make('h3', paper.title));
     if (paper.authors) details.append(make('p', paper.authors, 'paper-authors'));
+    const meta = make('div', '', 'paper-meta');
     const venue = [paper.venue, paper.year].filter(Boolean).join(' · ');
-    if (venue) details.append(make('p', venue, 'paper-venue'));
+    if (venue) meta.append(make('span', venue, 'paper-venue'));
     const links = make('div', '', 'paper-links');
     renderLinks(links, paper.links);
-    details.append(links);
+    meta.append(links);
+    details.append(meta);
     row.append(number, details);
     return row;
   }));
