@@ -13,10 +13,11 @@
 
   window.siteContent = {
     ...source,
+    name: "豊沢可為",
     role: "博士研究員",
     institution: "ミュンスター大学",
     photo: fromRoot(source.photo),
-    description: "Kai Toyosawaの個人ウェブサイト。ミュンスター大学の博士研究員。研究分野は作用素環論、幾何学的群論、エルゴード理論です。",
+    description: "豊沢可為の個人ウェブサイト。ミュンスター大学の博士研究員。研究分野は作用素環論、幾何学的群論、エルゴード理論です。",
     bio: [
       [
         "ミュンスター大学で博士研究員として、",
