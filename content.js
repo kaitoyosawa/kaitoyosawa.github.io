@@ -46,8 +46,7 @@ window.siteContent = {
     {
       title: "On relative biexactness of amalgamated free product von Neumann algebras",
       authors: "K. Toyosawa and Z. Yang",
-      venue: "Preprint",
-      year: "2025",
+      venue: "To appear in Advances in Mathematics",
       links: [{ label: "arXiv:2505.19508", url: "https://arxiv.org/abs/2505.19508" }]
     },
     {
