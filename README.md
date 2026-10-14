@@ -14,6 +14,9 @@ In the repository, open **Settings → Pages**. Choose **Deploy from a branch**,
 
 - Edit `content.js` to change the introduction, publications, contact details, or links.
 - Update the corresponding text and metadata in `index.html` too, so search engines and visitors without JavaScript see the same information.
+- The Japanese version is at `/ja/`. Edit `ja/content.js` for its translated introduction and labels, and update the matching static text in `ja/index.html` for visitors without JavaScript. Both pages have English / 日本語 links in the header.
+- Publications and contact details are shared from `content.js`; the Japanese version keeps published paper titles and author names in their original language and translates the surrounding labels. Update the static publication lists in both HTML files when papers change.
+- The Japanese page links to the same English CV and labels it accordingly.
 - Replace `cv.pdf` with your new CV, keeping the same filename.
 - Edit `styles.css` to change the appearance.
 - To add a photo later, upload `portrait.jpg` and set `photo: "portrait.jpg"` in `content.js`. Leave it empty to keep the current layout.

@@ -2,6 +2,13 @@
   'use strict';
   const content = window.siteContent;
   if (!content) return;
+  const ui = {
+    pageTitle: 'Personal website',
+    email: 'Email',
+    office: 'Office',
+    emailPlaceholder: 'Your email address',
+    ...content.ui
+  };
   const $ = id => document.getElementById(id);
   const make = (tag, text, className) => {
     const element = document.createElement(tag);
@@ -30,7 +37,7 @@
   const name = content.name || 'Your name';
   $('site-name').textContent = name;
   $('name').textContent = name;
-  document.title = name + ' — Personal website';
+  document.title = name + ' — ' + ui.pageTitle;
   if (content.description) document.querySelector('meta[name="description"]').content = content.description;
   $('affiliation').textContent = [content.role, content.institution].filter(Boolean).join(' · ');
   $('affiliation').hidden = !$('affiliation').textContent;
@@ -54,7 +61,7 @@
   const photoUrl = safeUrl(content.photo);
   if (photoUrl && !photoUrl.startsWith('mailto:')) {
     const portrait = $('portrait');
-    portrait.alt = 'Portrait of ' + name;
+    portrait.alt = ui.portraitSuffix ? name + ui.portraitSuffix : 'Portrait of ' + name;
     portrait.addEventListener('load', () => { portrait.hidden = false; });
     portrait.addEventListener('error', () => { portrait.hidden = true; });
     portrait.src = photoUrl;
@@ -65,11 +72,21 @@
     const number = make('span', String(papers.length - index).padStart(2, '0'), 'paper-number');
     number.setAttribute('aria-hidden', 'true');
     const details = make('div');
-    details.append(make('h3', paper.title));
-    if (paper.authors) details.append(make('p', paper.authors, 'paper-authors'));
+    const title = make('h3', paper.title);
+    if (content.publicationLanguage) title.lang = content.publicationLanguage;
+    details.append(title);
+    if (paper.authors) {
+      const authors = make('p', paper.authors, 'paper-authors');
+      if (content.publicationLanguage) authors.lang = content.publicationLanguage;
+      details.append(authors);
+    }
     const meta = make('div', '', 'paper-meta');
     const venue = [paper.venue, paper.year].filter(Boolean).join(' · ');
-    if (venue) meta.append(make('span', venue, 'paper-venue'));
+    if (venue) {
+      const venueLabel = make('span', venue, 'paper-venue');
+      if (paper.venueLanguage) venueLabel.lang = paper.venueLanguage;
+      meta.append(venueLabel);
+    }
     const links = make('div', '', 'paper-links');
     renderLinks(links, paper.links);
     meta.append(links);
@@ -85,19 +102,19 @@
   contact.replaceChildren();
   if (content.email || content.draft) {
     const block = make('div');
-    block.append(make('span', 'Email', 'contact-label'));
+    block.append(make('span', ui.email, 'contact-label'));
     const paragraph = make('p');
     if (content.email) {
       const email = make('a', content.email);
       email.href = 'mailto:' + content.email;
       paragraph.append(email);
-    } else paragraph.textContent = 'Your email address';
+    } else paragraph.textContent = ui.emailPlaceholder;
     block.append(paragraph);
     contact.append(block);
   }
   if (content.office) {
     const block = make('div');
-    block.append(make('span', 'Office', 'contact-label'), make('p', content.office));
+    block.append(make('span', ui.office, 'contact-label'), make('p', content.office));
     contact.append(block);
   }
   if (!contact.children.length) {
@@ -106,4 +123,14 @@
   }
   $('copyright').textContent = '© ' + new Date().getFullYear() + ' ' + name;
   $('draft-note').hidden = !content.draft;
+  // Keep the current section when moving between language versions.
+  document.querySelectorAll('[data-language-link]').forEach(link => {
+    const updateSection = () => {
+      const url = new URL(link.href);
+      url.hash = window.location.hash;
+      link.href = url.href;
+    };
+    updateSection();
+    window.addEventListener('hashchange', updateSection);
+  });
 })();
