@@ -104,11 +104,7 @@
     const block = make('div');
     block.append(make('span', ui.email, 'contact-label'));
     const paragraph = make('p');
-    if (content.email) {
-      const email = make('a', content.email);
-      email.href = 'mailto:' + content.email;
-      paragraph.append(email);
-    } else paragraph.textContent = ui.emailPlaceholder;
+    paragraph.textContent = content.email || ui.emailPlaceholder;
     block.append(paragraph);
     contact.append(block);
   }

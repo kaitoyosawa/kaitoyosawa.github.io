@@ -61,6 +61,6 @@ window.siteContent = {
       ]
     }
   ],
-  email: "ktoyosaw@uni-muenster.de",
+  email: "ktoyosaw[at]uni-muenster.de",
   office: "Mathematik Münster\nUniversität Münster\nEinsteinstr. 62\n48149 Münster, Germany"
 };
