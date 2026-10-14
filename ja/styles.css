@@ -1,0 +1,3 @@
+/* Keep the name reading close to the heading at every screen size. */
+#name{margin-bottom:.55rem}
+.name-reading{margin:0 0 1.5rem;font-size:.9375rem;line-height:1.6;color:var(--muted)}

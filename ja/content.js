@@ -13,24 +13,24 @@
 
   window.siteContent = {
     ...source,
-    name: "豊沢可為",
-    role: "博士研究員",
+    name: "豊沢 可為",
+    role: "ポスドク研究員",
     institution: "ミュンスター大学",
     photo: fromRoot(source.photo),
-    description: "豊沢可為の個人ウェブサイト。ミュンスター大学の博士研究員。研究分野は作用素環論、幾何学的群論、エルゴード理論です。",
+    description: "豊沢 可為（とよさわ かい）のホームページ。ミュンスター大学のポスドク研究員。作用素環論、幾何学的群論、エルゴード理論を研究しています。",
     bio: [
       [
-        "ミュンスター大学で博士研究員として、",
+        "ミュンスター大学でポスドク研究員として、",
         translatedPersonLink("David Kerr"),
-        "とともに研究を行っています。2025年5月に、",
+        "先生とともに研究しています。2025年5月に",
         translatedPersonLink("Jesse Peterson"),
-        "の指導のもと、ヴァンダービルト大学で数学の博士号を取得しました。"
+        "先生の指導のもと、ヴァンダービルト大学で数学の博士号を取得しました。"
       ],
-      "研究分野は作用素環論、幾何学的群論、エルゴード理論です。"
+      "作用素環論、幾何学的群論、エルゴード理論に興味があります。"
     ],
     links: source.links.map((link) => ({
       ...link,
-      label: /^cv\.pdf(?:[?#]|$)/.test(link.url) ? "CV（英語・PDF）" : link.label,
+      label: /^cv\.pdf(?:[?#]|$)/.test(link.url) ? "履歴書（英語・PDF）" : link.label,
       url: fromRoot(link.url)
     })),
     publicationLanguage: "en",
@@ -45,11 +45,11 @@
       }))
     })),
     ui: {
-      pageTitle: "個人ウェブサイト",
-      email: "メール",
-      office: "研究室",
+      pageTitle: "ホームページ",
+      email: "メールアドレス",
+      office: "所在地",
       emailPlaceholder: "メールアドレス",
-      portraitSuffix: "のポートレート"
+      portraitSuffix: "の写真"
     }
   };
 })();
