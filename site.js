@@ -35,7 +35,6 @@
     parent.hidden = !parent.children.length;
   };
   const name = content.name || 'Your name';
-  $('site-name').textContent = name;
   $('name').textContent = name;
   document.title = name + ' — ' + ui.pageTitle;
   if (content.description) document.querySelector('meta[name="description"]').content = content.description;
