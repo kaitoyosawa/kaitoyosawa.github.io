@@ -47,7 +47,7 @@
     ui: {
       pageTitle: "ホームページ",
       email: "メールアドレス",
-      office: "所在地",
+      office: "オフィス",
       emailPlaceholder: "メールアドレス",
       portraitSuffix: "の写真"
     }
