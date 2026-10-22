@@ -1,0 +1,266 @@
+% Jason R. Blevins - Curriculum Vitae
+%
+% Copyright (C) 2004-2024 Jason R. Blevins <jblevins@xbeta.org>
+% https://jblevins.org/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely.  No attribution is
+% required in any resulting documents.  I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[10pt,a4paper]{article}
+
+% Set your name here
+\def\name{Kai Toyosawa}
+
+% Load packages
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{enumitem} % Enumerate with [resume] option
+%\usepackage{fontspec} % Requires XeTeX
+\usepackage{sectsty} % Custom section fonts
+
+% Body
+%\setmainfont{Garamond Premier Pro}
+
+% Title
+%\newfontfamily\titleface{Chaparral Pro Subhead}
+\newcommand{\titlefont}[1]{{\large\MakeUppercase{#1}}}
+
+% Section Headings
+%\newfontfamily\sectionface{Chaparral Pro Subhead}
+\sectionfont{\bfseries\normalsize\uppercase}
+\subsectionfont{\bfseries\normalsize\itshape}
+
+\usepackage{titlesec} % for customizing section titles
+\usepackage{needspace} % for avoiding page brake right after the section title
+\titleformat{\section}{\needspace{\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.8 cm
+}{
+    % bottom space:
+    0.25 cm
+} % section title spacing
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {mathematics, operator algebras, geometric group theory,
+    ergodic theory},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 9.0in},
+  left=1.0in,
+  top=1.0in
+}
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets and compact spacing
+\renewenvironment{itemize}{
+  \begin{list}{}{
+      \setlength{\leftmargin}{1.5em}
+      \setlength{\itemsep}{0.25em}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0.25em}
+    }
+}{
+  \end{list}
+}
+\setlist[enumerate]{itemsep=0.25em}
+
+% Print the month and year
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or April\or May%
+\or June\or July\or August\or September\or October\or November\or December\fi%
+\space \number \year}
+
+% COVID-19 Cancellations
+\newcommand{\fncovid}{{\footnotesize ${}^{\dagger}$}}
+
+\begin{document}
+
+% Place name at left and date at right
+\titlefont{\name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\titlefont{\name}}
+
+% Date
+\bigskip
+Last updated: \today
+
+% Contact Information
+\bigskip
+\begin{minipage}[t]{0.495\textwidth}
+  Mathematik M\"unster\\
+  Universit\"at M\"unster\\
+  Einsteinstr.\ 62\\
+  48149 M\"unster, Germany
+\end{minipage}
+\begin{minipage}[t]{0.495\textwidth}
+  %\href{https://jblevins.org/}{https://jblevins.org/} \\
+  \href{mailto:ktoyosaw@uni-muenster.de}{ktoyosaw@uni-muenster.de} \\
+  \href{https://kaitoyosawa.github.io}{https://kaitoyosawa.github.io}
+  %(615) 322-2022
+\end{minipage}
+
+
+\section*{Academic Employment}
+
+\begin{itemize}
+  \item Postdoctoral researcher, University of M\"unster. \hfill \textit{October 2025 - Present.}
+\begin{itemize}
+    %\item Dissertation Title: ``Essays in Industrial Organization and Econometrics''.
+    \item Mentor: Prof. David Kerr
+    \end{itemize}
+\end{itemize}
+
+
+\section*{Education}
+
+\begin{itemize}
+  \item Ph.D. in Mathematics, Vanderbilt University. \hfill \textit{May 2025.}
+
+    \begin{itemize}
+    %\item Dissertation Title: ``Essays in Industrial Organization and Econometrics''.
+    \item Advisor: Prof. Jesse Peterson
+    \end{itemize}
+  \item M.A. in Mathematics, University of California, Los Angeles. \hfill \textit{June 2019.}
+    % Received May 14, 2006
+  \item B.S. in Mathematics, %\textit{Summa Cum Laude},
+    University of California, Los Angeles. \hfill \textit{June 2019.}
+    % Received May 14, 2004
+\end{itemize}
+
+%\section*{Research Interests}
+
+%Operator Algebras, Geometric Group Theory, Ergodic Theory
+
+
+\section*{Publications \& Preprints}
+
+\begin{enumerate}
+\item[5.] D. Osin, K. Toyosawa, Z. Yang: \textit{A paradoxical route from hyperbolic geometry to proper proximality}, arXiv:2609.21896.
+
+\item[4.] A.\ Fernández Quero, K.\ Toyosawa: \textit{Properly proximal countable measured groupoids}, arXiv:2609.01253.
+
+\item[3.] I.\ Chifan, K. Toyosawa, Z.\ Yang: \textit{Relative Biexactness for Relative Hyperbolic Groups and Some Applications}, arXiv:2608.23991.
+
+\item[2.] K.\ Toyosawa, Z.\ Yang: \textit{On relative biexactness of amalgamated free product von Neumann algebras}, Adv. Math. (to appear), arXiv:2505.19508.
+
+\item[1.] K.\ Toyosawa: \textit{Weak exactness and amalgamated free product of von Neumann algebras}, J.\ Funct.\ Anal.\ \textbf{288} (2025), no.\ 4, 110759.
+%preprint 2024,     \href{https://arxiv.org/abs/2403.12833}{arXiv:2403.12833}, 
+    %\href{https://jblevins.org/research/ctnpl}{Nested Pseudo Likelihood Estimation of Continuous-Time Dynamic Discrete Games}.
+    %\emph{Journal of Econometrics} 238.
+
+
+%\item B. Battseren and K. Toyosawa: \textit{Coarsely embeddable von Neumann algebras}, in progress.
+\end{enumerate}
+
+
+
+
+
+\section*{Honors \& Awards}
+
+\begin{itemize}
+\item B.F. Bryant Teaching Award, Vanderbilt University, 2024.
+\item Richard F. Arenstorf Fellowship, Vanderbilt University, 2019 - 2022.
+\end{itemize}
+
+
+\section*{Seminars \& Conferences}
+
+\subsection*{Conference Presentations}
+\begin{itemize}
+        \item The CJK Young Researchers in Functional Analysis 2026, Seoul National University, August 2026.
+        \item Young Mathematicians in C$^{*}$-Algebras (YMC$^{*}$A), Oxford University, August 2026.
+        \item Great Plains Operator Theory Symposium (GPOTS), University of Iowa, May 2026.
+        \item NSF/CBMS Regional Conference in the Mathematical Sciences: Classifying amenable operator algebras, Texas Christian University, June 2025
+        \item JMM AMS Special Session on Advances in Operator Algebras, Seattle, January 2025.
+        \item Young Mathematicians in C$^{*}$-Algebras (YMC$^{*}$A), University of Glasgow, August 2024.
+		\item Great Plains Operator Theory Symposium (GPOTS), University of Nebraska–Lincoln, June 2024.
+\end{itemize}
+
+
+\subsection*{Invited Seminars}
+\begin{itemize}
+        \item Operator Algebras Seminar, University of Tokyo, March 2026.
+        \item Seminar operator algebras, KU Leuven, December 2025.
+        \item Senior Seminar C$^*$-Algebras, University of M\"unster, November 2025.
+        \item Operator Theory Seminar, University of Virginia, January 2025.
+        \item Noncommutative Geometry \& Functional Analysis Seminar (online), SCMS Fudan University, November 2024.
+        \item Operator Theory Seminar, University of Iowa, November 2024.
+        \item Functional Analysis Seminar, Purdue University, October 2024.
+        \item Functional Analysis Seminar, University of California, San Diego, October 2024.
+		\item Subfactor Seminar, Vanderbilt University, February 2024.
+\end{itemize}
+
+\iffalse
+\section*{Teaching}
+\begin{itemize}
+    \item Teaching Assistant  \hfill Spring 2025 \\
+    \textit{MATH 1301 Accelerated Single-Variable Calculus I} \hfill Vanderbilt University
+    \item Teaching Assistant  \hfill Fall 2024\\
+    \textit{MATH 1300 Accelerated Single-Variable Calculus I} \hfill Vanderbilt University
+		\item Teaching Assistant  \hfill Spring 2024 \\
+		\textit{MATH 1201 Single-Variable Calculus II} \hfill Vanderbilt University
+		\item Teaching Assistant  \hfill Fall 2023\\
+		\textit{MATH 1300 Accelerated Single-Variable Calculus I} \hfill Vanderbilt University
+		\item Teaching Assistant  \hfill Spring 2023\\
+		\textit{MATH 2501 Multivariable Calculus and Linear Algebra} \hfill Vanderbilt University
+		\item Lecturer of Record  \hfill Fall 2022\\
+		\textit{MATH 1300 Accelerated Single-Variable Calculus I} \hfill Vanderbilt University
+		\item Teaching Assistant  \hfill Spring 2022\\
+		\textit{MATH 2501 Multivariable Calculus and Linear Algebra} \hfill Vanderbilt University
+		\item Teaching Assistant  \hfill Fall 2021\\
+		\textit{MATH 2500 Multivariable Calculus and Linear Algebra} \hfill Vanderbilt University
+		\item Teaching Assistant  \hfill Spring 2021\\
+		\textit{MATH 1200 Accelerated Single-Variable Calculus I} \hfill Vanderbilt University
+		\item Teaching Assistant  \hfill Fall 2020\\
+		\textit{MATH 1200 Accelerated Single-Variable Calculus I} \hfill Vanderbilt University
+		\item Teaching Assistant  \hfill Summer 2020\\
+		\textit{MATH 2300 Multivariable Calculus} \hfill Vanderbilt University
+
+		\subsection*{Extracurricular Mentoring}
+        \item Directed Reading Program Mentor \hfill Spring 2025 \\
+		\textit{Topic: Quantum Computation and Quantum Information} \hfill Vanderbilt University
+        
+		\item Directed Reading Program Mentor \hfill Spring 2024 \\
+		\textit{Topic: Point-set Topology and Smooth Manifolds, continued} \hfill Vanderbilt University
+
+		\item Directed Reading Program Mentor \hfill Fall 2023 \\
+		\textit{Topic: Point-set Topology and Smooth Manifolds} \hfill Vanderbilt University
+\end{itemize}
+\fi
+
+
+
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
