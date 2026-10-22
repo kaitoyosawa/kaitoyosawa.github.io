@@ -96,7 +96,6 @@
   }));
   if (!papers.length) {
     $('research').hidden = true;
-    document.querySelector('nav a[href="#research"]').hidden = true;
   }
   const contact = $('contact-details');
   contact.replaceChildren();
@@ -115,7 +114,6 @@
   }
   if (!contact.children.length) {
     $('contact').hidden = true;
-    document.querySelector('nav a[href="#contact"]').hidden = true;
   }
   $('copyright').textContent = '© ' + new Date().getFullYear() + ' ' + name;
   $('draft-note').hidden = !content.draft;

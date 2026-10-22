@@ -20,7 +20,7 @@ window.siteContent = {
   // Leave blank for a complete layout with no empty photo box.
   photo: "",
   // Example: { label: "Curriculum vitae", url: "cv.pdf" }
-  links: [{ label: "Curriculum vitae (PDF)", url: "cv.pdf?v=20260924" }],
+  links: [{ label: "Curriculum vitae (PDF)", url: "cv.pdf" }],
   papers: [
     {
       title: "A paradoxical route from hyperbolic geometry to proper proximality",
